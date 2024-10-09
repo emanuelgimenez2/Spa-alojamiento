@@ -2,6 +2,7 @@ import React from 'react'
 import { Carousel } from 'react-responsive-carousel'
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 import { Button } from '../components/ui/button'
+import Contact from './Contact';
 
 const StarRating = ({ rating }) => {
   return (
@@ -168,6 +169,9 @@ const Home = () => {
             ))}
           </div>
         </div>
+      </section>
+      <section className="py-12 sm:py-16 md:py-20 bg-gray-100">
+      <Contact/>
       </section>
 
       {/* CTA Section */}

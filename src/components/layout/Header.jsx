@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { Button } from '../ui/button'
 import { ThemeContext } from '../../contexts/ThemeContext'
 import { Menu, X } from 'lucide-react'
+import logo from '../../assets/logo.png' // Asegúrate de que la ruta sea correcta
 
 const Header = () => {
   const { darkMode, toggleDarkMode } = useContext(ThemeContext)
@@ -24,7 +25,11 @@ const Header = () => {
     <header className="bg-white dark:bg-gray-800 shadow-sm">
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
-          <div className="text-2xl font-bold text-primary dark:text-white">El Mangrullo</div>
+          {/* Aquí se agrega el logo */}
+          <div className="flex items-center">
+            <img src={logo} alt="El Mangrullo Logo" className="h-20 mr-2" />
+            
+          </div>
           <div className="md:hidden">
             <Button variant="ghost" onClick={toggleMenu}>
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
